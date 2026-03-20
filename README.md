@@ -73,10 +73,9 @@ Lakshmi – DevOps / Network Support Engineer
 
 ## Final Output
 
-<img width="1366" height="695" alt="Output" src="https://github.com/user-attachments/assets/93749397-31df-4546-915e-31b66c19b3c7" />
-
-
-
+<p align="center">
+  <img width="700" alt="Output" src="https://github.com/user-attachments/assets/75f7a53e-d294-457f-9edb-bcea58515543" />
+</p>
 
 
 
