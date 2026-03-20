@@ -72,11 +72,4 @@ Author
 Lakshmi – DevOps / Network Support Engineer
 
 
-- **Copy all of this text** (Ctrl+C or right-click → Copy)
 
----
-
-### **Step 2: Create README.md file in your project**
-```bash
-cd ~/Docker_Project
-nano README.md# Project Title
