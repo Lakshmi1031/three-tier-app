@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  flask-postgres-app1:
+    build: ./app
+    container_name: flask-postgres-app1
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: mydb
+      APP_ROLE: creator
+    command: ["./wait-for-it.sh", "db:5432", "--", "python3", "app.py"]
+
+  flask-postgres-app2:
+    build: ./app
+    container_name: flask-postgres-app2
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: mydb
+      APP_ROLE: worker
+    command: ["./wait-for-it.sh", "db:5432", "--", "python3", "app.py"]
+
+  db:
+    image: postgres:13
+    container_name: db
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - flask-postgres-app1
+      - flask-postgres-app2
