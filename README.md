@@ -73,11 +73,6 @@ Lakshmi – DevOps / Network Support Engineer
 
 ## Final Output
 
-<p align="center">
-  <img width="700" alt="Output" src="https://github.com/user-attachments/assets/75f7a53e-d294-457f-9edb-bcea58515543" />
-</p>
-
-Test Image:
-![Output](https://github.com/user-attachments/assets/75f7a53e-d294-457f-9edb-bcea58515543)
+![Output](output.png)
 
 
